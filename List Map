@@ -1,0 +1,84 @@
+package JAVA;
+
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.util.*;
+
+public class ListMapExercise {
+    public static void main(String args[]) throws Exception{
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        String input = br.readLine();
+
+        HashMap<Integer, String> map = new HashMap<Integer, String>(); //초기값 지정
+            map.put(1, "사과");
+            map.put(2, "바나나");
+            map.put(3, "포도");
+
+        System.out.println("map:" + map); //전체 출력 : {1=사과, 2=바나나, 3=포도}
+        System.out.println();
+        System.out.println(map.get(2));//key값 1의 value얻기 : 사과
+        System.out.println();
+
+        for (Integer i : map.keySet()) {
+            System.out.println("Key: " + i + " Value: " + map.get(i));
+        }
+
+        System.out.println("==================================");
+        System.out.println("Hello Goorm! Your input is " + input);
+        System.out.println("==================================");
+        System.out.println();
+
+        List<String> list = new ArrayList<>();
+        list.add("빨간색");
+        list.add("보라색");
+        list.add(1, "노란색");
+
+        System.out.println(list);
+        System.out.println("list.get(0): " + list.get(0));
+        System.out.println("list.get(1): " + list.get(1));
+        System.out.println("list.get(2): " + list.get(2));
+
+        if (list.contains(input)) { //입력 값이 list에 있다면
+            System.out.println("있는 색");
+            System.out.println("있는 색");
+        } else {
+            System.out.println("없는 색");
+            System.out.println("없는 색");
+        }
+
+
+        /////////////////////////////////////////////////////////////////////////////////
+//        List<Map<String, Object>> allList = new ArrayList<>();
+//
+//        Map<String, Object> animals = new HashMap<>();
+//        animals.put("big", "코끼리");
+//        animals.put("small", "해마");
+//        animals.put("cute", "햄스터");
+//        allList.add(animals);
+//
+//        Map<String, Object> fruit = new HashMap<>();
+//        fruit.put("big", "수박");
+//        fruit.put("small", "귤");
+//        fruit.put("cute", "샤인머스켓");
+//        allList.add(fruit);
+//
+//        System.out.println(allList.get(0));
+//        System.out.println(allList.get(1));
+//
+//        Object bigAnimal = allList.get(0).get("big");
+//        Object bigFruit = allList.get(1).get("big");
+//        Object smallAnimal = allList.get(0).get("small");
+//        Object smallFruit = allList.get(1).get("small");
+//        Object cuteAnimal = allList.get(0).get("cute");
+//        Object cuteFruit = allList.get(1).get("cute");
+//
+//        System.out.println("========================");
+//        System.out.println("공통점으로 분류");
+//
+//        System.out.println("큰 것: "+ bigAnimal + ", " + bigFruit);
+//        System.out.println("작은 것: "+ smallAnimal + ", " + smallFruit);
+//        System.out.println("귀여운 것: "+cuteAnimal + ", " + cuteFruit);
+
+    }
+}
+// 실행 하는 법 = ctrl + shift + f10
