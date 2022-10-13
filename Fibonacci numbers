@@ -1,3 +1,5 @@
+// 피보나치 수열과 합 구하기
+
 Scanner in = new Scanner(new InputStreamReader(System.in));
         List<Double> list = new ArrayList<>();  //배열 크기 때문에 ArrayList 사용
 
