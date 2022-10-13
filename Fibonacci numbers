@@ -1,0 +1,19 @@
+Scanner in = new Scanner(new InputStreamReader(System.in));
+        List<Double> list = new ArrayList<>();  //배열 크기 때문에 ArrayList 사용
+
+        System.out.print("원하는 수열의 갯수를 입력해주세요: ");
+        int size = in.nextInt();    //입력받은 갯수의 수열을 받기 위함
+        System.out.print(size + " 까지의 피보나치 수열: ");
+
+        DecimalFormat df = new DecimalFormat("0");  // double 타입 소수점 짜르기
+        list.add(1.0);  // 피보나치수열 첫번째 수 1 고정
+        list.add(1.0);  // 피보나치수열 두번째 수 1 고정
+        double sum = 0; // 합 넣을 변수 초기화
+        for (int i=2; i<=size+1; i++) { // 피보나치 수열은 n = (n-1) + (n-2) 이므로 i=2 부터 시작, 입력한 개수 size 만큼 반복
+            list.add(list.get(i-2) + list.get(i-1));
+            System.out.print(df.format(list.get(i-2)) + " ");   // 피보나치 수열 출력
+            sum += list.get(i-2);   // 총 합은 첫 번째 수 부터 입력받은 수까지 더함
+        }
+
+        System.out.println();
+        System.out.println("합: " + sum);
