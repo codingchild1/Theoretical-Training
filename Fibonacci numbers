@@ -19,3 +19,25 @@ Scanner in = new Scanner(new InputStreamReader(System.in));
 
         System.out.println();
         System.out.println("합: " + sum);
+
+
+////////////////// 완전 수 찾기 ////////////////////////
+        Scanner in = new Scanner(new InputStreamReader(System.in));
+        int x = in.nextInt();
+        int cnt = 0;
+        int tot = 0;
+        for (int i=4; i<x; i++) { // i 범위 4~500
+            int sum = 0;    // 반복문 돌때마다 sum 초기화
+            for (int j = 1; j<i; j++) { // 범위 내 약 수 찾기 위함
+                if (i % j == 0) {   // 약수 조건
+                    sum += j;   // 약수 들 모두 더한 값 sum 에 저장
+                }
+            }
+            if (i==sum) {   // 4 ~ 500 수 중에 약수를 모두 더한 값과 자신이 같으면 완전 수
+                System.out.println(i);
+                cnt++;  // 완전 수 찾을 때 마다 카운트
+                tot += i;
+            }
+        }
+        System.out.println("완전 수 개수: " + cnt + "개");
+        System.out.println("완전 수 의 합: " + tot);
