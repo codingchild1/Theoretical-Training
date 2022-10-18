@@ -1,0 +1,30 @@
+// 프로그래머스 3진법 뒤집기 문제
+
+class Solution {
+    public int solution(int n) {
+        String three = Integer.toString(n, 3);
+        String res = new StringBuilder(three).reverse().toString();
+      
+        return Integer.parseInt(res, 3);
+    }
+}
+
+// class Solution {
+//     public int solution(int n) {
+//         int answer = 0;
+//         String three = Integer.toString(n, 3);
+//         // 10진법 -> n진법 변환 Integer.toString(num, n);
+//         System.out.println(three);
+
+//         StringBuilder builder = new StringBuilder(three);
+//         // String -> StringBuilder 로 변환
+//         String res = builder.reverse().toString();
+//         // StringBuilder 의 reverse 함수 -> 문자열 뒤집기
+
+//         answer = Integer.parseInt(res, 3);
+//         // n진법 -> 10진법 변환 Integer.parseInt(num, n);
+//         System.out.println(answer);
+        
+//         return answer;
+//     }
+// }
